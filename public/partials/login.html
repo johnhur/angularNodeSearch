@@ -27,7 +27,7 @@
 		  </div>
 
 		  <button ng-hide="firstname && lastname && city && consent" class="fluid ui button" type="submit">Complete the form to continue enrollment</button>
-		  <button ng-click="postConsent()" ng-hide="!firstname || !lastname || !city || !consent" class="fluid ui button" type="submit"><a href="#/search">I understand and wish to continue with enrollment</a></button>
+		  <a href="#/search"><button ng-click="postConsent()" ng-hide="!firstname || !lastname || !city || !consent" class="fluid teal ui button" type="submit">I understand and wish to continue with enrollment</button></a>
 
 		</form>		
 	</div>

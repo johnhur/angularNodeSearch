@@ -1,15 +1,10 @@
-<ul>
-	<li ng-repeat="d in data">{{d}}</li>
-</ul>
-
-
 <div class="ui grid">
 
 	<div class="three wide column"></div>
 
 	<div class="ten wide column">
 
-		<h3 style="width: 50%; margin: 0 auto;">Search for a physician or organization</h3>
+		<h3 style="text-align: center;">Search for a physician or organization</h3>
 		<div class="ui fluid icon input" style="margin-top: 2%;">
 		  <input ng-model="search" type="text" placeholder="Search for a doctor, physician, or organization by name">
 		  <i class="search icon"></i>
@@ -21,9 +16,10 @@
 		    	<i class="right chevron icon"></i>
 		    </div>
 		    <div class="content">
-		    	<div ng-show="object.first_name" class="header"><i class="doctor icon"></i>{{object.first_name}}</div>
+		    	<div ng-show="object.first_name" class="header"><i class="doctor icon"></i>{{object.first_name}} | Zip Code: {{object.zip}} | NPI: {{object.npi}}</div>
 
-		      <div ng-show="object.organization_name" class="header"><i class="hospital icon"></i>{{object.organization_name}}</div>
+
+		      <div ng-show="object.organization_name" class="header"><i class="hospital icon"></i>{{object.organization_name}} | Zip Code: {{object.zip}} | NPI: {{object.npi}}</div>
 		    </div>
 		  </div>
 		</div>
