@@ -1,1 +1,36 @@
-{{test}}
+
+<div class="ui grid">
+
+	<div class="three wide column"></div>
+
+	<div class="ten wide column">
+		<form class="ui form">
+		  <div class="two fields">
+		  	<div class="field">
+		    <label>First Name</label>
+		    <input ng-model="firstname" type="text" name="first-name" placeholder="John">
+		    </div> 
+		  <div class="field">
+		    <label>Last Name</label>
+		    <input ng-model="lastname" type="text" name="last-name" placeholder="Doe">
+		  </div>
+		  </div>
+		  <div class="field">
+		  	<label>What city were you born in?</label>
+		  	 <input ng-model="city" type="text" name="city" placeholder="City Name">
+		  </div>
+		  <div class="field">
+		    <div ng-click="toggleConsent()" class="ui checkbox">
+		      <input ng-model="consent" type="checkbox" tabindex="0" class="hidden">
+		      <label>I consent to participate in the study</label>
+		    </div>
+		  </div>
+
+		  <button ng-hide="firstname && lastname && city && consent" class="fluid ui button" type="submit">Complete the form to continue enrollment</button>
+		  <button ng-click="postConsent()" ng-hide="!firstname || !lastname || !city || !consent" class="fluid ui button" type="submit"><a href="#/search">I understand and wish to continue with enrollment</a></button>
+
+		</form>		
+	</div>
+
+	<div class="three wide column"></div>
+</div>
